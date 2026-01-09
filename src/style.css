@@ -1,0 +1,237 @@
+/* Global Styles & Variables */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+  /* Colors - Matching original HSL values */
+  --background: 222, 47%, 11%;
+  --foreground: 210, 40%, 98%;
+  
+  --card: 222, 47%, 13%;
+  --card-foreground: 210, 40%, 98%;
+  
+  --primary: 174, 84%, 41%;
+  --primary-foreground: 210, 40%, 98%;
+  
+  --secondary: 217, 33%, 17%;
+  --secondary-foreground: 210, 40%, 98%;
+  
+  --muted: 215, 25%, 27%;
+  --muted-foreground: 215, 20%, 65%;
+  
+  --accent: 174, 84%, 41%;
+  --accent-foreground: 210, 40%, 98%;
+  
+  --border: 217, 33%, 17%;
+  --input: 217, 33%, 17%;
+  
+  --radius: 0.75rem;
+
+  /* Font Families */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Typography Utilities */
+.font-display { font-family: var(--font-display); }
+.font-sans { font-family: var(--font-sans); }
+.font-mono { font-family: var(--font-mono); }
+
+.text-primary { color: hsl(var(--primary)) !important; }
+.text-muted-foreground { color: hsl(var(--muted-foreground)) !important; }
+.text-foreground { color: hsl(var(--foreground)) !important; }
+
+.text-gradient {
+  background: linear-gradient(to right, hsl(var(--primary)), #34d399, hsl(var(--primary)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Backgrounds & Glassmorphism */
+.bg-background { background-color: hsl(var(--background)); }
+.bg-secondary-20 { background-color: hsla(var(--secondary), 0.2); }
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: hsla(var(--card), 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid hsla(var(--border), 0.5);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Buttons */
+.btn-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* rounded-full */
+}
+
+.btn-lg-custom {
+  padding: 1.75rem 2rem;
+  font-size: 1.125rem;
+}
+
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+}
+.btn-primary:hover {
+  background-color: hsla(var(--primary), 0.9);
+  color: hsl(var(--primary-foreground));
+}
+
+.btn-outline-custom {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: hsl(var(--foreground));
+}
+.btn-outline-custom:hover {
+  background-color: hsla(var(--primary), 0.1);
+  border-color: hsl(var(--primary));
+  color: hsl(var(--foreground));
+}
+
+.btn-ghost-custom {
+  background-color: transparent;
+  color: hsl(var(--foreground));
+}
+.btn-ghost-custom:hover {
+  background-color: hsla(var(--secondary), 0.5);
+  color: hsl(var(--primary));
+}
+
+/* Layout Utilities */
+.min-h-screen { min-height: 100vh; }
+.pt-20 { padding-top: 5rem; }
+.py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+
+/* Navbar */
+.navbar-custom {
+  transition: all 0.3s ease;
+  padding: 1.5rem 0;
+}
+.navbar-custom.scrolled {
+  background: rgba(15, 23, 42, 0.7); /* dark background with opacity */
+  backdrop-filter: blur(12px);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: hsl(var(--primary));
+}
+
+/* Animations */
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Effects */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+}
+.blob-primary {
+  background-color: hsla(var(--primary), 0.2);
+}
+.blob-emerald {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+.blob-blue {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Project Card Hover */
+.project-card .img-wrapper img {
+  transition: transform 0.7s ease;
+}
+.project-card:hover .img-wrapper img {
+  transform: scale(1.05);
+}
+.project-card:hover {
+  border-color: hsla(var(--primary), 0.5);
+}
+
+/* Skill Tags */
+.skill-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.group:hover .skill-tag {
+  border-color: hsla(var(--primary), 0.3);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  z-index: 100;
+}
+.mobile-menu.open {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
