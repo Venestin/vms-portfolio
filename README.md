@@ -1,59 +1,59 @@
-# Enhanced Vite React TypeScript Template
+# Enhanced VMS Portfolio 🚀
 
-This template includes built-in detection for missing CSS variables between your Tailwind config and CSS files.
+Portfolio personnel développé avec **React, TypeScript et Vite**, mettant en avant mes compétences, projets et statistiques à travers une interface moderne, rapide et responsive.
 
-## Features
+## 🚀 Live Demo
 
-- **CSS Variable Detection**: Automatically detects if CSS variables referenced in `tailwind.config.cjs` are defined in `src/index.css`
-- **Enhanced Linting**: Includes ESLint, Stylelint, and custom CSS variable validation
-- **Shadcn/ui**: Pre-configured with all Shadcn components
-- **Modern Stack**: Vite + React + TypeScript + Tailwind CSS
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://venestin.github.io/vms-portfolio/)
 
-## Available Scripts
+> 🔗 Remplace `TON-USERNAME` par ton vrai nom d’utilisateur GitHub.
+
+---
+
+## 📌 Description
+
+Enhanced VMS Portfolio est une application web moderne conçue pour présenter mon profil de développeur.
+Le projet met l’accent sur :
+- la performance
+- une architecture propre
+- une interface utilisateur élégante
+- des bonnes pratiques modernes en frontend
+
+---
+
+## 🛠️ Technologies utilisées
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Shadcn/ui
+- ESLint & Stylelint
+
+---
+
+## ✨ Features
+
+- **CSS Variable Detection**  
+  Détection automatique des variables CSS manquantes entre `tailwind.config.cjs` et `src/index.css`
+
+- **Enhanced Linting**  
+  Intégration de ESLint, Stylelint et validation personnalisée des variables CSS
+
+- **Shadcn/ui**  
+  Composants UI modernes et préconfigurés
+
+- **Modern Stack**  
+  Vite + React + TypeScript + Tailwind CSS
+
+---
+
+## 📦 Installation locale
+
+Pour lancer le projet en local :
 
 ```bash
-# Run all linting (includes CSS variable check)
-npm run lint
-
-# Check only CSS variables
-npm run check:css-vars
-
-# Individual linting
-npm run lint:js    # ESLint
-npm run lint:css   # Stylelint
-```
-
-## CSS Variable Detection
-
-The template includes a custom script that:
-
-1. **Parses `tailwind.config.cjs`** to find all `var(--variable)` references
-2. **Parses `src/index.css`** to find all defined CSS variables (`--variable:`)
-3. **Cross-references** them to find missing definitions
-4. **Reports undefined variables** with clear error messages
-
-### Example Output
-
-When CSS variables are missing:
-```
-❌ Undefined CSS variables found in tailwind.config.cjs:
-   --sidebar-background
-   --sidebar-foreground
-   --sidebar-primary
-
-Add these variables to src/index.css
-```
-
-When all variables are defined:
-```
-✅ All CSS variables in tailwind.config.cjs are defined
-```
-
-## How It Works
-
-The detection happens during the `npm run lint` command, which will:
-- Exit with error code 1 if undefined variables are found
-- Show exactly which variables need to be added to your CSS file
-- Integrate seamlessly with your development workflow
-
-This prevents runtime CSS issues where Tailwind classes reference undefined CSS variables.
+git clone https://github.com/venestin/vms-portfolio.git
+cd VMS_Portofolio
+npm install
+npm run dev
