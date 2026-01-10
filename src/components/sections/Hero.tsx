@@ -141,7 +141,7 @@ export function Hero() {
                 <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-3 sm:border-4 border-primary/20 shadow-2xl glass">
                   <div className="relative w-full h-full">
                     <img
-                      src="/Profile-photo.webp"
+                      src="/vms-portfolio/Profile-photo.webp"
                       alt="Developer Portfolio"
                       className="
                           w-full h-full
