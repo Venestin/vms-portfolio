@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
+  base: '/vms-portfolio/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -14,5 +15,5 @@ export default defineConfig({
     strictPort: true,
     host: true,
     allowedHosts: true,
-  }
-});
+  },
+})
