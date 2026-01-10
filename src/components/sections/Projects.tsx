@@ -82,6 +82,45 @@ const projects = [
 ];
 >>>>>>> e22e05b (fix: added projects.tsx but images still not showing)
 
+const projects = [
+  {
+    title: "Pharmaceutical Office Management Dashboard",
+    description:
+      "A comprehensive dashboard for managing a pharmaceutical office, including inventory tracking, sales management, and real-time operational insights.",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Node.js", "Express.js", "REST API", "Chart.js"],
+    image: `${import.meta.env.BASE_URL}iMac-and-iPhone-Pro-Showcase-Screens-Free-psd-Mockup.webp`,
+    link: "#",
+    github: "#",
+  },
+  {
+    title: "English Training Center Website",
+    description:
+      "A modern website for an English training center, showcasing courses, supporting learner engagement, and promoting language skill development.",
+    tags: ["HTML", "CSS", "Bootstrap", "JavaScript", "Figma", "Responsive Design"],
+    image: `${import.meta.env.BASE_URL}Macbook-Pro-Showcase-Screen-Scene-Free-psd-Mockup.webp`,
+    link: "#",
+    github: "#",
+  },
+  {
+    title: "Dynamic Association Website",
+    description:
+      "Designed and developed a dynamic platform that presents the association’s details and marketing content, with a customized blog and a dedicated admin panel for content management.",
+    tags: ["UI/UX", "JavaScript", "HTML5/CSS", "Bootstrap"],
+    image: `${import.meta.env.BASE_URL}iPad-Proand-iPhone-Pro-Showcase-Screens-Free-psd-Mockup.webp`,
+    link: "#",
+    github: "#",
+  },
+  {
+    title: "Smart Pharmacy Management System",
+    description:
+      "An intelligent dashboard for pharmacies that centralizes sales history, stock monitoring, low-stock and expiration alerts, and operational analytics.",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Node.js", "Express.js", "REST API", "Chart.js"],
+    image: `${import.meta.env.BASE_URL}Macbook-Air-and-iPad-Pro-Showcase-Screens-psd-Mockup.webp`,
+    link: "#",
+    github: "#",
+  },
+];
+
   return (
     <section id="projects" className="py-24 bg-secondary/20 relative overflow-hidden" data-aos="fade-up">
       {/* Background */}
