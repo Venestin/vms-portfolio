@@ -16,10 +16,11 @@ import "aos/dist/aos.css";
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 900,
-      easing: "ease-out-cubic",
+      duration: 1000,
+      easing: "ease-in-out",
       once: true,
     });
+    AOS.refresh(); // Assure que toutes les animations sont détectées
   }, []);
 
   return (

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
-import "aos/dist/aos.css";
+import "aos/dist/aos.css"; // juste importer le CSS
 
 ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
