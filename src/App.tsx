@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
@@ -23,26 +23,19 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
-        <ScrollProgress />
-        <Navbar />
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
+      <ScrollProgress />
+      <Navbar />
 
-        <Routes>
-          {/* HOME */}
-          <Route path="/" element={<Home />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/chat" element={<ChatPage />} />
+      </Routes>
 
-          {/* DASHBOARD */}
-          <Route path="/dashboard" element={<Dashboard />} />
-
-          {/* CHAT */}
-          <Route path="/chat" element={<ChatPage />} />
-        </Routes>
-
-        <Footer />
-        <Toaster position="bottom-right" />
-      </div>
-    </BrowserRouter>
+      <Footer />
+      <Toaster position="bottom-right" />
+    </div>
   );
 }
 

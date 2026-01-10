@@ -6,7 +6,7 @@ Portfolio personnel développé avec **React, TypeScript et Vite**, mettant en a
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://venestin.github.io/vms-portfolio/)
 
-> 🔗 Remplace `TON-USERNAME` par ton vrai nom d’utilisateur GitHub.
+
 
 ---
 
