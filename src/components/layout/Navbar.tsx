@@ -76,7 +76,10 @@ export function Navbar() {
             </a>
 
             {/* Resume Download Button */}
-            <a href="/vms-portfolio/CV_FullStack_VMS.pdf" download>
+            <a
+              href={`${import.meta.env.BASE_URL}CV_FullStack_VMS.pdf`}
+              download
+            >
               <Button
                 size="sm"
                 className="rounded-full px-6 flex items-center gap-2"
