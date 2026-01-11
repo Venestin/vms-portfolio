@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: '/',
+  base: '/', // Important pour Vercel
   plugins: [react()],
   resolve: {
     alias: {
@@ -14,6 +14,9 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
     host: true,
-    allowedHosts: true,
+    allowedHosts: true, // autorise toutes les connexions locales pour dev
+  },
+  build: {
+    outDir: 'dist', // dossier de sortie pour Vercel
   },
 })

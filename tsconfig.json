@@ -14,31 +14,18 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    
-    // Désactiver les checks stricts pour éviter les erreurs
+
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noImplicitAny": false,
     "strictNullChecks": false,
-    "noFallthroughCasesInSwitch": false,
-    "skipDefaultLibCheck": true,
-    "noImplicitReturns": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "exactOptionalPropertyTypes": false,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitOverride": false,
-    "allowUnreachableCode": true,
-    "allowUnusedLabels": true,
-    
+
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
-    
-    // IMPORTANT: Ajouter les types
     "types": ["vite/client", "node"]
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src"]
 }
