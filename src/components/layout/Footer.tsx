@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
             <a href="#" className="text-2xl font-bold font-display tracking-tighter mb-6 block">
-              DEV<span className="text-primary">VMS</span>
+              VMS<span className="text-primary">Dev</span>
             </a>
             <p className="text-muted-foreground max-w-md mb-8">
               Full-stack developer specializing in modern web technologies, UI/UX design, and data-driven growth, bridging engineering, design, and strategy to solve real business problems.
