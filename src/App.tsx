@@ -20,7 +20,7 @@ function App() {
       easing: "ease-in-out",
       once: true,
     });
-    AOS.refresh(); // Assure que toutes les animations sont détectées
+    AOS.refresh();
   }, []);
 
   return (

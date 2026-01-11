@@ -25,6 +25,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    
+    // IMPORTANT: Ajouter les types
     "types": ["vite/client", "node"]
   },
   "include": ["src"]
